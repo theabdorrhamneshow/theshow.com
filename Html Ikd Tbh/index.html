@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Game and Profile</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Background styling for yellow and blue granite effect */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #FFD700 25%, #1E90FF 25%, #1E90FF 50%, #FFD700 50%, #FFD700 75%, #1E90FF 75%);
+            background-size: 50px 50px;
+        }
+
+        /* Profile picture styling */
+        #profile-picture {
+            border-radius: 50%;
+            width: 150px; /* Adjust size as needed */
+            height: 150px;
+            margin-bottom: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Introduction text box styling */
+        #intro-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            width: 80%;
+            max-width: 600px;
+            background-color: #ffffff;
+            color: #333;
+            font-size: 1.2em;
+            border-radius: 15px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Profile Picture -->
+    <img id="profile-picture" src="https://yt3.googleusercontent.com/SI1dP1A_GGffCqdODgzoQxYtpj4Cs_gmpT3FLNVBJiyVQS2AMGrGggzHgEUcA3ALGqTKZNXn2Q=s160-c-k-c0x00ffffff-no-rj" alt="Profile Picture">
+    
+    <!-- Introduction Text -->
+    <div id="intro-text">
+        Hi there! I'm a 17-year-old from America who loves coding. I sometimes encounter challenges, but I keep pushing forward because coding is my passion!
+    </div>
+
+    <!-- Game Canvas Container (if needed) -->
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+    </div>
+    
+    <!-- Main script for the game -->
+    <script src="dist/main.js" type="module"></script> <!-- Link to your TypeScript output JavaScript -->
+</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Skills</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            margin: 0;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .skill-bar-container {
+            width: 80%;
+            max-width: 600px;
+            margin: 10px 0;
+        }
+
+        .skill {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        .skill-bar {
+            background-color: #333;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 10px;
+            margin-top: 5px;
+        }
+
+        .fill {
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        /* Specific skill colors and percentages */
+        .python .fill { width: 98%; background-color: #4B8BBE; }
+        .javascript .fill { width: 51%; background-color: #F0DB4F; }
+        .html .fill { width: 98%; background-color: #E34C26; }
+        .css .fill { width: 96%; background-color: #264DE4; }
+        .typescript .fill { width: 87%; background-color: #3178C6; }
+
+        /* Social Links Styling */
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            transition: transform 0.2s;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.1);
+        }
+
+        .social-links img {
+            width: 25px;
+            height: 25px;
+            margin-right: 8px;
+            filter: brightness(0) invert(1); /* White icons */
+        }
+    </style>
+</head>
+<body>
+    <h1>My Skills</h1>
+
+    <div class="skill-bar-container">
+        <div class="skill">
+            <span>Python</span>
+            <span>98%</span>
+        </div>
+        <div class="skill-bar python">
+            <div class="fill"></div>
+        </div>
+    </div>
+
+    <div class="skill-bar-container">
+        <div class="skill">
+            <span>JavaScript</span>
+            <span>51%</span>
+        </div>
+        <div class="skill-bar javascript">
+            <div class="fill"></div>
+        </div>
+    </div>
+
+    <div class="skill-bar-container">
+        <div class="skill">
+            <span>HTML</span>
+            <span>98%</span>
+        </div>
+        <div class="skill-bar html">
+            <div class="fill"></div>
+        </div>
+    </div>
+
+    <div class="skill-bar-container">
+        <div class="skill">
+            <span>CSS</span>
+            <span>96%</span>
+        </div>
+        <div class="skill-bar css">
+            <div class="fill"></div>
+        </div>
+    </div>
+
+    <div class="skill-bar-container">
+        <div class="skill">
+            <span>TypeScript</span>
+            <span>87%</span>
+        </div>
+        <div class="skill-bar typescript">
+            <div class="fill"></div>
+        </div>
+    </div>
+
+    <!-- Social Links Section -->
+    <div class="social-links">
+        <a href="https://www.youtube.com/@RetiringYoutube" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube Icon">
+            YouTube
+        </a>
+        <a href="https://www.instagram.com/abdo_playz630/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Icon">
+            Instagram
+        </a>
+        <a href="#" onclick="alert('My Discord: murnt_66012'); return false;">
+            <img src="https://upload.wikimedia.org/wikipedia/en/9/98/Discord_logo.svg" alt="Discord Icon">
+            Discord
+        </a>
+    </div>
+</body>
+</html>
